@@ -26,6 +26,8 @@ this example:
    
 ```
 
+**I have had a hard time trying to get my javascript file to connect to my html file, so it has been embedded into the html file itself.**
+
 web url: https://fathomless-inlet-07646.herokuapp.com/
 
 git url: https://github.com/Cindyyyyw/276GradeCalculator
