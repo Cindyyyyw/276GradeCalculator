@@ -1,4 +1,4 @@
-#Grade Calculator
+# Grade Calculator
 
 This is the first CMPT 276 assignment.
 I have implemented a basic interface of the grade calculator.
@@ -27,4 +27,5 @@ this example:
 ```
 
 web url: https://fathomless-inlet-07646.herokuapp.com/
+
 git url: https://github.com/Cindyyyyw/276GradeCalculator
