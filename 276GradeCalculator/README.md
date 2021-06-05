@@ -1,40 +1,30 @@
-# java-getting-started
+#Grade Calculator
 
-A barebones Java app, which can easily be deployed to Heroku.
+This is the first CMPT 276 assignment.
+I have implemented a basic interface of the grade calculator.
 
-This application supports the [Getting Started with Java on Heroku](https://devcenter.heroku.com/articles/getting-started-with-java) article - check it out.
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Running Locally
-
-Make sure you have Java and Maven installed.  Also, install the [Heroku CLI](https://cli.heroku.com/).
-
-```sh
-$ git clone https://github.com/heroku/java-getting-started.git
-$ cd java-getting-started
-$ mvn install
-$ heroku local:start
+The grade calculator consists of the following features:
+- Mean of grades calculation
 ```
+The sum of all grades divided by the total number of grades
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-If you're going to use a database, ensure you have a local `.env` file that reads something like this:
+   A1 70/100, A2 20/80, A3 10/10:
+   (0.7 + 0.25 + 1.0)/3 = 0.65 -> 65/100
 
 ```
-JDBC_DATABASE_URL=jdbc:postgresql://localhost:5432/java_database_name
+- Weighted grades calculation
+```
+Each grade item can be given a weight, which is then used in the arithmetic 
+mean aggregation to influence the importance of each item in the overall mean.
+In simple terms, the category "total" will be equal to the sum of the scores 
+in each grade item, these scores being multiplied by the grade items' weights,
+and that sum being finally divided by the sum of the weights, as shown in 
+this example:
+
+    A1 70/100 weight 10, A2 20/80 weight 5, A3 10/10 weight 3:
+    (0.7*10 + 0.25*5 + 1.0*3)/18 = 0.625 -> 62.5/100
+   
 ```
 
-## Deploying to Heroku
-
-```sh
-$ heroku create
-$ git push heroku main
-$ heroku open
-```
-
-## Documentation
-
-For more information about using Java on Heroku, see these Dev Center articles:
-
-- [Java on Heroku](https://devcenter.heroku.com/categories/java)
+web url: https://fathomless-inlet-07646.herokuapp.com/
+git url: https://github.com/Cindyyyyw/276GradeCalculator
